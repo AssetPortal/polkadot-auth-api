@@ -22,7 +22,7 @@ jobs:
 
       - name: Install pnpm
         run: |
-          curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
+          SHELL=bash curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
 
       - name: Install dependencies
         run: |
