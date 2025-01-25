@@ -5,11 +5,12 @@ on:
     branches:
       - main
 
+env:
+  IMAGE_REPO: "assetportal/polkadot-auth-api"
+
 jobs:
   lint:
     runs-on: ubuntu-latest
-    env:
-      IMAGE_REPO: assetportal/polkadot-auth-api
 
     steps:
       - name: Checkout code
@@ -51,5 +52,5 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64 \
-            --tag ${{ env.IMAGE_REPO }}:${{ github.sha }} \
+            --tag $IMAGE_REPO:${{ github.sha }} \
             .
