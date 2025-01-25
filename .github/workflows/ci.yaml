@@ -22,19 +22,19 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npx pnpm install
+          npm install
 
       - name: Run Linter
         run: |
-          npx pnpm run lint
+          npm run lint
 
       - name: Run Build
         run: |
-          npx pnpm run build
+          npm run build
 
       - name: Run Tests
         run: |
-          npx pnpm run test
+          npm run test
 
   build-docker:
     runs-on: ubuntu-latest
