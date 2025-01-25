@@ -20,26 +20,21 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install pnpm
-        run: |
-          export SHELL=/usr/bin/bash
-          curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
-
       - name: Install dependencies
         run: |
-          pnpm install
+          npx pnpm install
 
       - name: Run Linter
         run: |
-          pnpm run lint
+          npx pnpm run lint
 
       - name: Run Linter
         run: |
-          pnpm run build
+          npx pnpm run build
 
       - name: Run Tests
         run: |
-          pnpm run test
+          npx pnpm run test
 
   build-docker:
     runs-on: ubuntu-latest
