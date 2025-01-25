@@ -28,7 +28,7 @@ jobs:
         run: |
           npx pnpm run lint
 
-      - name: Run Linter
+      - name: Run Build
         run: |
           npx pnpm run build
 
