@@ -42,11 +42,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build and Push Docker image
+      - name: Build Docker image
         run: |
-          docker build -t {{ env.IMAGE_REPO }}:${{ env.COMMIT_SHA }} .
+          docker buildx build \
+            --platform linux/amd64 \
+            --tag ${{ env.IMAGE_REPO }}:${{ github.sha }} \
+            .
