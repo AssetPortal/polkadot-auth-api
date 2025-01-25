@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Wake up stage API
         run: |
-          curl --fail {{ vars.STAGE_HEALTH_ENDPOINT }}
+          curl --fail ${{ vars.STAGE_HEALTH_ENDPOINT }}
