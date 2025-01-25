@@ -7,7 +7,7 @@
     "build": "npx tsc",
     "start": "node dist/index.js",
     "test": "jest",
-    "lint": "pnpm eslint src/",
+    "lint": "npx eslint src/",
     "dev": "npx ts-node-dev --respawn --transpile-only --debug ./src/index.ts"
   },
   "keywords": [],

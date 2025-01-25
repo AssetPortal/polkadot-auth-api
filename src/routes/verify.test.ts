@@ -40,7 +40,8 @@ describe('POST /verify', () => {
       });
 
     expect(response.status).toBe(400);
-    expect(response.body.error).toBe('Invalid Polkadot address');
+    expect(response.body.ok).toBe(false);
+    expect(response.body.message).toBe('Invalid Polkadot address');
   });
   it('should return 400 if the signature is invalid', async () => {
     const response = await request(app)
@@ -52,7 +53,8 @@ describe('POST /verify', () => {
       });
 
     expect(response.status).toBe(400);
-    expect(response.body.error).toBe('Invalid signature length');
+    expect(response.body.ok).toBe(false);
+    expect(response.body.message).toBe('Invalid signature length');
   });
 
   it('should return 400 if the address is invalid', async () => {
@@ -65,6 +67,7 @@ describe('POST /verify', () => {
       });
 
     expect(response.status).toBe(400);
-    expect(response.body.errors).toBeDefined();
+    expect(response.body.ok).toBe(false);
+    expect(response.body.message).toBe("\"message\" is required and must be a string.");
   });
 });
