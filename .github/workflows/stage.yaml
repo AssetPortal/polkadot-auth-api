@@ -29,5 +29,5 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64 \
-            --tag ${{ env.IMAGE_REPO }}:${{ github.sha }} \
+            --tag $IMAGE_REPO:${{ github.sha }} \
             --push .
