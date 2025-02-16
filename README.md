@@ -1,3 +1,5 @@
+[![CI](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/ci.yaml/badge.svg)](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/ci.yaml)[![Stage](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/stage.yaml/badge.svg)](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/stage.yaml)[![Production](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/production.yaml/badge.svg)](https://github.com/AssetPortal/polkadot-auth-api/actions/workflows/production.yaml)
+
 # Polkadot Signature Verification API
 
 ## Overview
@@ -100,8 +102,8 @@ Before using the API, ensure the following tools are installed:
 #### Clone the Repository
 
 ```bash
-git clone <repository_url>
-cd polkadot-verification-api
+git clone https://github.com/AssetPortal/polkadot-auth-api
+cd polkadot-auth-api
 ```
 
 #### Install Dependencies
