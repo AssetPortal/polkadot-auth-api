@@ -102,8 +102,8 @@ Before using the API, ensure the following tools are installed:
 #### Clone the Repository
 
 ```bash
-git clone <repository_url>
-cd polkadot-verification-api
+git clone https://github.com/AssetPortal/polkadot-auth-api
+cd polkadot-auth-api
 ```
 
 #### Install Dependencies
